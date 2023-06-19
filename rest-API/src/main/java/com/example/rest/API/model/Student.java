@@ -10,15 +10,16 @@ import lombok.NoArgsConstructor;
 @Table(name = "student")
 
 public class Student {
+
+    @Column
+    private int userId;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column
-    private String name;
+    private String title;
     @Column
-    private String address;
-    @Column
-    private long phoneNumber;
+    private String body;
 
 }

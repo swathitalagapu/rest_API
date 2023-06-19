@@ -15,4 +15,9 @@ public class StudentService {
         Student student = studentRepo.findById(id).get();
         return Optional.of(student);
     }
+
+    public Student createStudentDetails(Student student){
+        studentRepo.save(student);
+        return student;
+    }
 }
